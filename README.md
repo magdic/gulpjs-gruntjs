@@ -40,7 +40,7 @@ module.exports = function(grunt) {
     uglify: {  
       minimizar: {
         files: {
-          // primero el destino, segundo la fuente
+          // first the dest, second the source
           'app/js/all.min.js': ['app/js/*.js'] 
         }
       }
