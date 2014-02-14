@@ -17,38 +17,57 @@ Grup and Grunt file example code, with the task to do the javascript min files
 var gulp    = require('gulp'),
     gutil    = require('gulp-util'),
     uglify  = require('gulp-uglify'),
+    zip = require('gulp-zip'),
     concat  = require('gulp-concat');
 
-    gulp.task('js', function () { // gulp js = on console just doing the js task
-    gulp.src('./app/js/*.js') // source to minify
+    gulp.task('js', function () { // gulp js = en consola y solo ejecuta la tarea de minimzar los js
+    gulp.src('./app/js/*.js') // Fuente sin minizar
         .pipe(uglify())
         .pipe(concat('all.min.js')) 
-        .pipe(gulp.dest('./app/js')); // min file dest
+        .pipe(gulp.dest('./app/js')); // destino minimizado
 });
 
-    gulp.task('default', function(){ //gulp on console and doing the default tasks
-    gulp.run('js'); 
+    gulp.task('zip', function () {
+    gulp.src('app/*/*') //folder / * = js or css / another * = extensions
+        .pipe(zip('public_site.zip'))
+        .pipe(gulp.dest('./app'));
+});
+
+    gulp.task('default', function(){ //gulp en consola y ejecuta todas las tareas por default
+    gulp.run('js'); // gulp js = en consola y solo ejecuta la tarea de minimzar los js
+    gulp.run('zip'); // gulp js = en consola y solo ejecuta la tarea de minimzar los js
 });
 ```
 
 ### Gruntfile.js sourcecode
 ```javascript
 module.exports = function(grunt) { 
+
+require('time-grunt')(grunt);
+  
   grunt.initConfig({ 
     pkg: grunt.file.readJSON('package.json'), 
  
+    // minify js
     uglify: {  
       minimizar: {
         files: {
-          // first the dest, second the source
+          // primero el destino, segundo la fuente
           'app/js/all.min.js': ['app/js/*.js'] 
         }
       }
-    }
-  });
- 
-  grunt.loadNpmTasks('grunt-contrib-uglify'); // just doing the uglify task on console = grunt uglify
-  grunt.registerTask('default', ['uglify']); // all taks on the grunt file on console = grunt 
+    },
+
+    zip: {
+    // We accept short syntax
+    // 'dest/file.Zip': ['firstFileToZip', 'secondFileToZip', '.../folder/*']
+    'app/public_site.zip': ['app/*']
+  }
+  }); 
+
+  grunt.loadNpmTasks('grunt-zip'); // Para comprimir como zip desde consola = grunt zip
+  grunt.loadNpmTasks('grunt-contrib-uglify'); // Para minimizar desde consola = grunt uglify
+  grunt.registerTask('default', ['uglify']); // Para minimizar desde consola solamente = grunt 
 };
 ```
 

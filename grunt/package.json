@@ -10,6 +10,10 @@
   "license": "Free",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-uglify": "~0.3.2"
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-zip": "~0.12.0"
+  },
+  "dependencies": {
+    "time-grunt": "~0.2.9"
   }
 }
