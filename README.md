@@ -9,7 +9,7 @@
 
 ## Gulp/Grunt file.js
 
-Grup and Grut file example code, with the task to do the javascript min files 
+Grup and Grunt file example code, with the task to do the javascript min files 
 
 * gulpfile.js sourcecode
 
