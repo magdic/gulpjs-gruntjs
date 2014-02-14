@@ -1,5 +1,5 @@
-## Gulp.js la alternativa para Grunt.js
-
+## Gulp.js the alternative to Grunt.js
+### Gulp Docs
 - [Website](http://gulpjs.com)
 - [Guide doc](https://github.com/gulpjs/gulp/blob/master/README.md#gulp---)
 - [Get Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
