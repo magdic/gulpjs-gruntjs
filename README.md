@@ -11,7 +11,7 @@
 
 Grup and Grunt file example code, with the task to do the javascript min files 
 
-* gulpfile.js sourcecode
+### gulpfile.js sourcecode
 
 ```javascript
 var gulp    = require('gulp'),
@@ -31,7 +31,7 @@ var gulp    = require('gulp'),
 });
 ```
 
-* Gruntfile.js sourcecode
+### Gruntfile.js sourcecode
 ```javascript
 module.exports = function(grunt) { 
   grunt.initConfig({ 
