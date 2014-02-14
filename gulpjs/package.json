@@ -1,0 +1,17 @@
+{
+  "name": "gulpjs",
+  "version": "0.0.0",
+  "description": "Gulpjs introduction",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Magdiel Cordero",
+  "license": "Free",
+  "devDependencies": {
+    "gulp-util": "~2.2.14",
+    "gulp": "~3.5.2",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.1"
+  }
+}
