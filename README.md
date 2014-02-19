@@ -58,13 +58,13 @@ require('time-grunt')(grunt);
       }
     },
 
-    cssmin: {
+    cssmin: { //minify css files
       minify: {
       expand: true,
       cwd: 'app/css',
-      src: ['*.css', '!*.min.css'],
-      dest: 'app/css/',
-      ext: '.min.css'
+      src: ['*.css', '!*.min.css'], //first the source code, then the .min.css files
+      dest: 'app/css/', //destination
+      ext: '.min.css'   //extension
       }
   },
 
