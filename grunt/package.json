@@ -7,13 +7,27 @@
     "test": "test"
   },
   "author": "Magdiel Cordero",
-  "license": "Free",
+  "license": "FREE",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-uglify": "~0.3.2",
-    "grunt-zip": "~0.12.0"
+    "grunt-zip": "~0.12.0",
+    "grunt-contrib-cssmin": "~0.8.0"
   },
   "dependencies": {
     "time-grunt": "~0.2.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magdic/gulpjs-gruntjs"
+  },
+  "keywords": [
+    "gulpjs",
+    "comparative",
+    "gruntjs"
+  ],
+  "bugs": {
+    "url": "https://github.com/magdic/gulpjs-gruntjs/issues"
+  },
+  "homepage": "https://github.com/magdic/gulpjs-gruntjs"
 }

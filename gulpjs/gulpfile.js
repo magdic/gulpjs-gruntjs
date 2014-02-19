@@ -12,12 +12,12 @@ var gulp    = require('gulp'),
 });
 
     gulp.task('zip', function () {
-    gulp.src('app/*/*') //folder / * = js or css / another * = extensions
+    gulp.src('app/*/*') // Main Folder / * = js or css / another * = extensions
         .pipe(zip('public_site.zip'))
         .pipe(gulp.dest('./app'));
 });
 
     gulp.task('default', function(){ //gulp en consola y ejecuta todas las tareas por default
     gulp.run('js'); // gulp js = en consola y solo ejecuta la tarea de minimzar los js
-    gulp.run('zip'); // gulp js = en consola y solo ejecuta la tarea de minimzar los js
+    gulp.run('zip'); // gulp zip = en consola y solo ejecuta la tarea de comprimir en zip todo lo de app
 });
